@@ -5,13 +5,22 @@ package com.bunny.v1;
 
 service CustomerService {
   rpc GetAll (GetAllRequest) returns (GetAllResponse) {}
-//  rpc Get (CustomerRequestId) returns (Customer) {}
-//  rpc Insert (Customer) returns (Customer) {}
-//  rpc Update (Customer) returns (Customer) {}
-//  rpc Remove (CustomerRequestId) returns (Empty) {}
+  rpc Get (GetRequest) returns (GetResponse) {}
 }
 
 message GetAllRequest {}
+
+message GetRequest {
+  string id = 1;
+}
+
+message GetAllResponse {
+  repeated Customer customers = 1;
+}
+
+message GetResponse {
+  Customer customer = 1;
+}
 
 message Customer {
   string id = 1;
@@ -19,11 +28,3 @@ message Customer {
   int32 age = 3;
   string address = 4;
 }
-
-message GetAllResponse {
-  repeated Customer customers = 1;
-}
-
-//message CustomerRequestId {
-//  string id = 1;
-//}
