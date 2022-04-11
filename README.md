@@ -1,11 +1,11 @@
-Adapted from: https://blog.logrocket.com/creating-a-crud-api-with-node-express-and-grpc/
-And from: https://dev.to/devaddict/use-grpc-with-node-js-and-typescript-3c58
+From: https://dev.to/devaddict/use-grpc-with-node-js-and-typescript-3c58
+Other worse sources: https://blog.logrocket.com/creating-a-crud-api-with-node-express-and-grpc/
 
 ```shell
 brew install bufbuild/buf/buf
 ```
 
-... Doesn't work on Mac M1 (arm64)
+... Typescript generation doesn't work on Mac M1 (arm64)
 
 This is on an amd64 arch:
 
